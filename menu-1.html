@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Menu</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fffdf8;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    header {
+        text-align: center;
+        padding: 1.5rem;
+        background: linear-gradient(to right, #ff7e00, #ffb347);
+        color: white;
+    }
+
+    h2 {
+        color: #d35400;
+        margin-top: 2rem;
+        border-bottom: 2px solid #f0e0d0;
+        padding-bottom: 0.3rem;
+    }
+
+    .menu-section {
+        width: 90%;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.8rem 0;
+        border-bottom: 1px dotted #ccc;
+    }
+
+    .menu-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex: 1;
+    }
+
+    .menu-info img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .menu-text {
+        flex: 1;
+    }
+
+    .menu-text h4 {
+        margin: 0;
+        color: #333;
+    }
+
+    .price {
+        color: #27ae60;
+        font-weight: bold;
+        min-width: 60px;
+        text-align: right;
+    }
+
+    /* Filters */
+    .filters {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1rem;
+        background-color: #fff4e6;
+        border-bottom: 2px solid #ffd5b8;
+    }
+
+    .radio-group input {
+        display: none;
+    }
+
+    .radio-group label {
+        background-color: #ffe6cc;
+        padding: 0.4rem 1rem;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .radio-group input:checked + label {
+        background-color: #ff944d;
+        color: white;
+        font-weight: bold;
+    }
+
+    /* Fixed Order Button */
+    .order-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #ff4e00;
+        color: white;
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-radius: 25px;
+        font-size: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Rotating Chef's Badge */
+    .badge {
+        display: inline-block;
+        background-color: #ff4e00;
+        color: white;
+        padding: 0.2rem 0.5rem;
+        font-size: 0.7rem;
+        border-radius: 50%;
+        animation: spin 5s linear infinite;
+        margin-left: 5px;
+    }
+
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🍽 Delicious Bites</h1>
+    <p>Where every bite feels like home</p>
+</header>
+
+<!-- Filters -->
+<div class="filters">
+    <div class="radio-group">
+        <input type="radio" id="all" name="category" checked>
+        <label for="all">All</label>
+        <input type="radio" id="veg" name="category">
+        <label for="veg">Veg</label>
+        <input type="radio" id="nonveg" name="category">
+        <label for="nonveg">Non-Veg</label>
+    </div>
+</div>
+
+<div class="menu-section">
+    <h2>Starters</h2>
+    <div class="menu-item">
+        <div class="menu-info">
+            <img src="https://source.unsplash.com/60x60/?soup" alt="Tomato Soup">
+            <div class="menu-text">
+                <h4>Tomato Soup <span class="badge">★</span></h4>
+            </div>
+        </div>
+        <div class="price">₹120</div>
+    </div>
+    <div class="menu-item">
+        <div class="menu-info">
+            <img src="https://source.unsplash.com/60x60/?bread" alt="Garlic Bread">
+            <div class="menu-text"><h4>Garlic Bread</h4></div>
+        </div>
+        <div class="price">₹80</div>
+    </div>
+    <div class="menu-item">
+        <div class="menu-info">
+            <img src="https://source.unsplash.com/60x60/?springrolls" alt="Veg Spring Rolls">
+            <div class="menu-text"><h4>Veg Spring Rolls</h4></div>
+        </div>
+        <div class="price">₹150</div>
+    </div>
+
+    <h2>Main Course</h2>
+    <div class="menu-item">
+        <div class="menu-info">
+            <img src="https://source.unsplash.com/60x60/?paneer" alt="Paneer Butter Masala">
+            <div class="menu-text"><h4>Paneer Butter Masala</h4></div>
+        </div>
+        <div class="price">₹250</div>
+    </div>
+    <div class="menu-item">
+        <div class="menu-info">
+            <img src="https://source.unsplash.com/60x60/?biryani" alt="Chicken Biryani">
+            <div class="menu-text"><h4>Chicken Biryani</h4></div>
+        </div>
+        <div class="price">₹300</div>
+    </div>
+    <div class="menu-item">
+        <div class="menu-info">
+            <img src="https://source.unsplash.com/60x60/?friedrice" alt="Veg Fried Rice">
+            <div class="menu-text"><h4>Veg Fried Rice</h4></div>
+        </div>
+        <div class="price">₹180</div>
+    </div>
+
+    <h2>Desserts</h2>
+    <div class="menu-item">
+        <div class="menu-info">
+            <img src="https://source.unsplash.com/60x60/?gulabjamun" alt="Gulab Jamun">
+            <div class="menu-text"><h4>Gulab Jamun</h4></div>
+        </div>
+        <div class="price">₹90</div>
+    </div>
+    <div class="menu-item">
+        <div class="menu-info">
+            <img src="https://source.unsplash.com/60x60/?brownie" alt="Chocolate Brownie">
+            <div class="menu-text"><h4>Chocolate Brownie</h4></div>
+        </div>
+        <div class="price">₹150</div>
+    </div>
+    <div class="menu-item">
+        <div class="menu-info">
+            <img src="https://source.unsplash.com/60x60/?icecream" alt="Ice Cream Sundae">
+            <div class="menu-text"><h4>Ice Cream Sundae</h4></div>
+        </div>
+        <div class="price">₹120</div>
+    </div>
+</div>
+
+<!-- Fixed Order Button -->
+<button class="order-btn" onclick="addToCart()">🛒 Order <span class="cart-counter" id="cartCounter">0</span></button>
+
+
+</body>
+</html>
+
+
