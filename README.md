@@ -21,3 +21,10 @@ To practice building structured layouts and styling user-friendly interfaces for
 
 ## 📂 Project Structure# Restaurant-Menu-Page
 HTML and CSS code for Restaurant Menu Page 
+
+## 📌 Future Enhancements
+- Add JavaScript for filtering menu items  
+- Integrate backend for dynamic menu updates  
+
+## 👩‍💻 Author
+Priyavarseinee
